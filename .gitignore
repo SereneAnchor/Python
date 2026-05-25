@@ -1,0 +1,50 @@
+# IDE / editor files
+.idea/
+.vscode/
+
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build / packaging outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage / type-checking caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Logs and runtime-generated files
+*.log
+05_File/LogSystem/Logs/
+
+# Environment variables and local secrets
+.env
+.env.*
+
+# OS temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit local config / runtime state
+.streamlit/secrets.toml
+
+# Optional: uncomment these if you want to ignore generated file-practice outputs.
+# I keep the current .txt/.csv/.json examples tracked because they are part of
+# the file-operation learning records.
+# 05_File/Write.txt
+# 05_File/Student.json
+# 05_File/Students.csv

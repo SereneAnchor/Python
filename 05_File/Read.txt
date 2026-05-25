@@ -1,0 +1,18 @@
+/**
+ *  @file    Config.h
+ *  @brief   游戏全局可调参数集中配置
+**/
+
+#ifndef CONFIG
+#define CONFIG
+
+/**
+ *  @brief  玩家基础属性
+ *
+ *  @param  PLAYER_HP             玩家最大生命值。
+ *  @param  PLAYER_SPEED          玩家移动速度。
+ *  @param  PLAYER_COOLTIME       玩家射击冷却时间,单位毫秒。
+ *  @param  PLAYER_BULLET_SPEED   玩家子弹速度。
+ *  @param  PLAYER_BULLET_DMG     玩家子弹伤害。
+ *  @param  PLAYER_INVINCIBLE     玩家受击后的无敌时间,单位毫秒。
+**/

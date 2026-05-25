@@ -1,0 +1,6 @@
+{
+    "appName": "MyApp",
+    "version": "1.0.0",
+    "debug": false,
+    "port": 8000
+}
