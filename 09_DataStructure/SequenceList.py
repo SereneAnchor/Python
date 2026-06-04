@@ -2,11 +2,11 @@
 
 class SequenceList:
 
-	#顺序表以列表的形式来存储
+	#使用列表来存储顺序表元素
 	def __init__(self):
 		self.items=[]
 
-	#在顺序表末尾添加值为value的元素
+	#在顺序表末尾添加值为value的元素(extend方法也可以)
 	def appendItem(self,value):
 		self.items.append(value)
 
