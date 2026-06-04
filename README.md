@@ -123,7 +123,7 @@ python main.py
 运行某个具体练习文件，例如：
 
 ```bash
-python 03_BaseType/List.py
+python 03_BaseType/SequenceList.py
 ```
 
 如果运行 `06_OllamaChat` 中的 Streamlit 项目，需要先安装依赖：
@@ -257,7 +257,7 @@ python main.py
 Run a specific practice file:
 
 ```bash
-python 03_BaseType/List.py
+python 03_BaseType/SequenceList.py
 ```
 
 To run the Streamlit project in `06_OllamaChat`, install the dependencies first:

@@ -1,3 +1,5 @@
+#继承
+
 #Teacher、Student类内无任何实现,但继承了Person的Eat、Sleep方法;Person默认继承Object类
 class Person:
 	def Eat(self):

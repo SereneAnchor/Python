@@ -45,7 +45,7 @@ pop=listA.pop(2)
 print(f"pop 2:{pop}")
 print(f"pop 2:{listA}")
 
-#9.remove:移除列表中指定的元素(有多个则移除第一个出现的元素),如果不存在也不报错
+#9.remove:移除列表中指定的元素(有多个则移除第一个出现的元素),如果不存在报错
 listA.remove('H')
 print(f"remove H:{listA}")
 
