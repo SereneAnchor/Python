@@ -52,4 +52,3 @@ if __name__=="__main__":
 	print(f"栈长度:{stack.getLength()}")
 
 
-

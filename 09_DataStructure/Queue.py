@@ -33,7 +33,6 @@ class Queue:
 	def printQueue(self):
 		print(f"输出队列:{self.items}")
 
-
 if __name__=="__main__":
 	#创建队列,队列中无任何元素
 	queue=Queue()

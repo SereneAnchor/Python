@@ -45,8 +45,6 @@ class SequenceList:
 	def printList(self):
 		print(f"输出顺序表:{self.items}")
 
-
-
 if __name__=="__main__":
 	#创建顺序表,表中无任何元素
 	sequenceList=SequenceList()
@@ -69,6 +67,5 @@ if __name__=="__main__":
 
 	sequenceList.printList()
 	print(f"顺序表长度:{sequenceList.getLength()}")
-
 
 
