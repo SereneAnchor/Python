@@ -1,7 +1,6 @@
 #栈
 
 class Stack:
-
 	#使用列表来存储栈元素
 	def __init__(self):
 		self.items=[]
@@ -32,13 +31,13 @@ class Stack:
 
 	#输出栈
 	def printStack(self):
-		print(self.items)
+		print(f"输出栈:{self.items}")
 
 
 if __name__=="__main__":
 	#创建栈,栈中无任何元素
 	stack=Stack()
-	print(f"Is Empty:{stack.isEmpty()}")
+	print(f"栈为空:{stack.isEmpty()}")
 
 	#元素进栈
 	stack.pushItem('A')
@@ -46,11 +45,11 @@ if __name__=="__main__":
 	stack.pushItem('C')
 	stack.printStack()
 
-	print(f"Stack peek:{stack.peekItem()}")
-	print(f"Stack pop :{stack.popItem()}")
-	stack.printStack()
+	print(f"获取栈顶:{stack.peekItem()}")
+	print(f"移除栈顶:{stack.popItem()}")
 
-	print(f"Length:{stack.getLength()}")
+	stack.printStack()
+	print(f"栈长度:{stack.getLength()}")
 
 
 

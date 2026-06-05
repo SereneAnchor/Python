@@ -1,7 +1,6 @@
 #顺序表
 
 class SequenceList:
-
 	#使用列表来存储顺序表元素
 	def __init__(self):
 		self.items=[]
@@ -44,30 +43,32 @@ class SequenceList:
 
 	#输出顺序表(无return时默认返回None)
 	def printList(self):
-		print(self.items)
+		print(f"输出顺序表:{self.items}")
 
 
 
 if __name__=="__main__":
 	#创建顺序表,表中无任何元素
 	sequenceList=SequenceList()
-	print(f"Is Empty:{sequenceList.isEmpty()}")
+	print(f"顺序表为空:{sequenceList.isEmpty()}")
 
 	#往表中加入元素
-	sequenceList.appendItem(10)
-	sequenceList.appendItem(20)
-	sequenceList.appendItem(30)
+	sequenceList.appendItem('A')
+	sequenceList.appendItem('B')
+	sequenceList.appendItem('C')
 	sequenceList.printList()
 
-	#在表中索引为1的位置插入15
-	sequenceList.insertItem(1,15)
+	#在表中索引为1的位置插入'P'
+	sequenceList.insertItem(1,'P')
 
-	#修改表中索引为2的元素值为25
-	sequenceList.modifyItem(2,25)
+	#修改表中索引为2的元素值为'X'
+	sequenceList.modifyItem(2,'X')
 
-	print(f"Index 0:{sequenceList.getItem(0)}")
-	print(f"Find 25:{sequenceList.findItem(25)}")
-	print(f"Length :{sequenceList.getLength()}")
+	print(f"按索引[0]查找元素:{sequenceList.getItem(0)}")
+	print(f"按元素'X'查找索引:{sequenceList.findItem('X')}")
+
+	sequenceList.printList()
+	print(f"顺序表长度:{sequenceList.getLength()}")
 
 
 
