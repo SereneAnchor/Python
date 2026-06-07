@@ -24,7 +24,7 @@ print(f"append G:{listA}")
 
 #5.extend:将列表B追加到列表A中
 listB=['R','S','T']
-print(f"listB:{listB}")
+print(f" listB  :{listB}")
 listA.extend(listB)
 print(f"extend B:{listA}")
 
