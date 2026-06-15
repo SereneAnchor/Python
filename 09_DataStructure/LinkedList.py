@@ -35,7 +35,7 @@ class LinkedList:
 	#按值查找节点
 	def findNode(self,value):
 		current=self.head
-		#链表非空
+		#链表非空时遍历
 		while current is not None:
 			if current.value==value:
 				return current
@@ -103,5 +103,7 @@ if __name__=="__main__":
 
 	print(f"Remove H:{linkedList.removeNode('H')}")
 	linkedList.printLinkedList()
+
+
 
 
