@@ -2,7 +2,7 @@
 
 class HashTable:
 
-	#
+	#构造哈希表
 	def __init__(self,capacity=8):
 		#capacity表示桶数组容量,也就是一开始准备多少个桶
 		self.capacity=capacity
@@ -11,7 +11,7 @@ class HashTable:
 		#length表示哈希表真正保存了多少个键值对
 		self.length=0
 
-	#
+	#计算key所对应的hash值,一次运行时hash值不变
 	def hash(self,key):
 		#hash(key)会得到一个整数,取余之后能保证下标落在0到capacity-1之间
 		return hash(key)%self.capacity
@@ -21,14 +21,15 @@ class HashTable:
 		#负载因子=已保存的键值对数量/桶数组容量
 		return self.length/self.capacity
 
-	#扩容
+	#扩容(同一次程序运行时hash(key)不会变但是index可能会改变,因为修改了capacity)
 	def resize(self):
 		#扩容前先保存旧的键值对
 		oldItems=self.getResults()
 		#容量扩为原来的2倍
 		self.capacity*=2
-		#容量变了,key对capacity取余得到的index也可能变,必须重新创建数组
+		#容量变了,hash(key)对capacity取余得到的index也可能变,必须重新创建数组
 		self.buckets=[ [] for i in range(self.capacity)]
+		#length必须赋为0,否则长度会重复累加;后续循环的setItem会重新计算length
 		self.length=0
 		#把旧键值对重新插入新桶数组,重新计算每个key的位置(rehash)
 		for key,value in oldItems:
@@ -42,15 +43,15 @@ class HashTable:
 	def getLength(self):
 		return self.length
 
-	#
+	#将键值对存入桶中
 	def setItem(self,key,value):
 		#若负载因子过高,则先扩容减少后续冲突
 		if self.loadFactor()>=0.75:
 			self.resize()
-		#根据key计算它放在哪个桶里
+		#根据key计算它放在哪个桶里,bucket就是实际存放key-value的桶
 		index=self.hash(key)
 		bucket=self.buckets[index]
-		#若key存在就更新value
+		#遍历桶,若key存在就更新value,pair是每一个键值对组合
 		for pair in bucket:
 			if pair[0]==key:
 				pair[1]=value
@@ -59,12 +60,12 @@ class HashTable:
 		bucket.append([key,value])
 		self.length+=1
 
-	#
+	#根据key找到桶返回对应的value
 	def getItem(self,key,default=None):
 		#根据key找到对应的桶
 		index=self.hash(key)
 		bucket=self.buckets[index]
-		#在桶中逐个查找key;可能发生哈希冲突,同一个桶里存在多个键值对
+		#在桶中逐个查找key;同一个桶里存在多个键值对,可能发生哈希冲突
 		for pair in bucket:
 			if pair[0]==key:
 				return pair[1]
@@ -73,8 +74,10 @@ class HashTable:
 
 	#判断某个key是否存在
 	def containsKey(self,key):
+		#无论key是否存在,一定能找到一个桶
 		index=self.hash(key)
 		bucket=self.buckets[index]
+		#在某个桶内继续判断是否有key存在(桶为空或者是没有key)
 		for pair in bucket:
 			if pair[0]==key:
 				return True
@@ -87,6 +90,7 @@ class HashTable:
 		bucket=self.buckets[index]
 		#遍历桶,找到key后删除整个[key,value]
 		for i in range(len(bucket)):
+			#bucket[i]表示第i个键值对
 			if bucket[i][0]==key:
 				removedPair=bucket.pop(i)
 				self.length-=1
@@ -99,6 +103,7 @@ class HashTable:
 	def getKeys(self):
 		keys=[]
 		for bucket in self.buckets:
+			#bucket内包含多个以list存储的键值对,取出每一个键值对
 			for key,value in bucket:
 				keys.append(key)
 		return keys
@@ -113,8 +118,11 @@ class HashTable:
 
 	#返回哈希表中所有key、value,类似于dict.items()
 	def getResults(self):
+		#收集所有的键值对
 		result=[]
+		#bucket是每一个桶
 		for bucket in self.buckets:
+			#取出每一个桶中的各个键值对,以元组的形式添加到result中
 			for key,value in bucket:
 				result.append((key,value))
 		return result
@@ -124,9 +132,9 @@ class HashTable:
 		self.buckets=[ [] for i in range(self.capacity)]
 		self.length=0
 
-	#输出哈希表
+	#输出哈希表(enumerate返回一对值:下标+元素)
 	def printTable(self):
-		#输出每个桶的内容,观察哈希冲突和内部结构
+		#输出每个桶的内容(桶的编号:桶的数据),观察哈希冲突和内部结构
 		for index,bucket in enumerate(self.buckets):
-			print(f"{index}:{bucket}")
+			print(f"第{index}个桶{bucket}")
 
