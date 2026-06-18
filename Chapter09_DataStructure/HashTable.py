@@ -4,6 +4,8 @@ class HashTable:
 
 	#构造哈希表
 	def __init__(self,capacity=8):
+		if not isinstance(capacity,int) or isinstance(capacity,bool) or capacity<=0:
+			raise ValueError("哈希表容量必须是正整数!")
 		#capacity表示桶数组容量,也就是一开始准备多少个桶
 		self.capacity=capacity
 		#buckets是哈希表真正存储数据的地方,一个大列表中的元素又是每一个小列表
@@ -45,9 +47,6 @@ class HashTable:
 
 	#将键值对存入桶中
 	def setItem(self,key,value):
-		#若负载因子过高,则先扩容减少后续冲突
-		if self.loadFactor()>=0.75:
-			self.resize()
 		#根据key计算它放在哪个桶里,bucket就是实际存放key-value的桶
 		index=self.hash(key)
 		bucket=self.buckets[index]
@@ -56,7 +55,13 @@ class HashTable:
 			if pair[0]==key:
 				pair[1]=value
 				return
-		#key不存在就把新的[key,value]放进这个桶
+		#加入新键后负载因子超过0.75时先扩容
+		if (self.length+1)/self.capacity>0.75:
+			self.resize()
+			#扩容后capacity发生变化,需要重新计算桶的位置
+			index=self.hash(key)
+			bucket=self.buckets[index]
+		#把新的[key,value]放进这个桶
 		bucket.append([key,value])
 		self.length+=1
 
@@ -69,7 +74,7 @@ class HashTable:
 		for pair in bucket:
 			if pair[0]==key:
 				return pair[1]
-		#找不到key返回默认值None
+		#找不到key时返回调用者指定的默认值
 		return default
 
 	#判断某个key是否存在
