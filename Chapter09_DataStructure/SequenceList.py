@@ -5,33 +5,41 @@ class SequenceList:
 	def __init__(self):
 		self.items=[]
 
-	#在顺序表末尾添加值为value的元素(extend方法也可以)
+	#在顺序表末尾添加值为value的元素
 	def appendItem(self,value):
 		self.items.append(value)
 
 	#在顺序表索引为index的位置插入值为value的元素
 	def insertItem(self,index,value):
+		if index<0 or index>len(self.items):
+			raise IndexError(f"索引{index}越界,无法插入!")
 		self.items.insert(index,value)
 
 	#移除顺序表中值为value的元素(若存在多个则移除第一个出现的元素、不存在报异常)
 	def removeItem(self,value):
-		if value not in self.items:
-			raise ValueError(f"{value}不存在,无法删除.")
-		self.items.remove(value)
+		try:
+			self.items.remove(value)
+		except ValueError:
+			raise ValueError(f"{value}不存在,无法删除!") from None
 
 	#修改索引为index位置处的元素值为value
 	def modifyItem(self,index,value):
+		if index<0 or index>=len(self.items):
+			raise IndexError(f"索引{index}越界,无法修改!")
 		self.items[index]=value
 
 	#获取索引为index位置处的元素值
 	def getItem(self,index):
+		if index<0 or index>=len(self.items):
+			raise IndexError(f"索引{index}越界,无法获取!")
 		return self.items[index]
 
 	#查找表中是否存在值为value的元素(存在返回其下标、否则返回-1)
 	def findItem(self,value):
-		if value in self.items:
+		try:
 			return self.items.index(value)
-		return -1
+		except ValueError:
+			return -1
 
 	#获取顺序表长度
 	def getLength(self):
