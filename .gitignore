@@ -1,52 +1,45 @@
-# IDE / editor files
-.idea/
-.vscode/
-AAA/
-概念解释.md
+#默认忽略项目根目录下的所有内容
+/*
 
-# Python bytecode and cache files
-__pycache__/
-*.py[cod]
-*$py.class
+#保留.gitignore文件本身
+!/.gitignore
 
-# Python build / packaging outputs
-build/
-dist/
-*.egg-info/
-.eggs/
+#只允许上传以下Python学习包
+!/Chapter01_VariableLogic/
+!/Chapter02_LoopControl/
+!/Chapter03_BaseType/
+!/Chapter04_Function/
+!/Chapter05_File/
+!/Chapter06_OllamaChat/
+!/Chapter07_Object/
+!/Chapter09_DataStructure/
 
-# Virtual environments
-.venv/
-venv/
-env/
-ENV/
+#忽略各个包中自动生成的Python缓存文件
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
 
-# Test / coverage / type-checking caches
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
+#忽略测试工具生成的缓存和报告
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/htmlcov/
 
-# Logs and runtime-generated files
-*.log
-05_File/LogSystem/Logs/
+#忽略虚拟环境
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
 
-# Environment variables and local secrets
-.env
-.env.*
+#忽略日志、环境变量及系统临时文件
+**/*.log
+**/.env
+**/.env.*
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
 
-# OS temporary files
-.DS_Store
-Thumbs.db
-desktop.ini
+#忽略文件操作练习中自动生成的日志目录
+/Chapter05_File/LogSystem/Logs/
 
-# Streamlit local config / runtime state
-.streamlit/secrets.toml
-
-# Optional: uncomment these if you want to ignore generated file-practice outputs.
-# I keep the current .txt/.csv/.json examples tracked because they are part of
-# the file-operation learning records.
-# 05_File/Write.txt
-# 05_File/Student.json
-# 05_File/Students.csv
