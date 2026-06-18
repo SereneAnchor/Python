@@ -19,7 +19,7 @@ class MaxHeap:
 
 	#向上调整:当前节点和父节点比较,找出较大节点进行交换;继续往上找
 	def shiftUp(self,index):
-		while True:
+		while index>0:
 			#找到当前节点的父节点
 			parent=self.getParent(index)
 			#当前节点>父节点,当前节点和父节点交换,index上移指向当前较大的节点
@@ -34,15 +34,15 @@ class MaxHeap:
 	def shiftDown(self,index):
 		while True:
 			#large指向当前节点
-			large=index;
+			large=index
 			#获取当前节点的左右节点
 			left=self.getLeftChild(index)
 			right=self.getRightChild(index)
 			#左节点存在且左节点>当前节点,large指向左节点
-			if left<left(self.items) and self.items[left]>self.items[large]:
+			if left<len(self.items) and self.items[left]>self.items[large]:
 				large=left
 			#右节点存在且右节点>当前节点,large指向右节点
-			if right<left(self.items) and self.items[right]>self.items[large]:
+			if right<len(self.items) and self.items[right]>self.items[large]:
 				large=right
 			#large指向当前节点,无需交换
 			if large==index:
