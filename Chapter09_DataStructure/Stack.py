@@ -9,16 +9,18 @@ class Stack:
 	def pushItem(self,value):
 		self.items.append(value)
 
-	#元素出栈(不返回出栈元素)
+	#元素出栈并返回出栈元素
 	def popItem(self):
 		if self.isEmpty():
 			print(f"栈空.")
+			return None
 		return self.items.pop()
 
 	#获取栈顶元素
 	def peekItem(self):
 		if self.isEmpty():
 			print(f"栈空.")
+			return None
 		return self.items[-1]
 
 	#获取栈长度
