@@ -40,10 +40,11 @@ class LinkedList:
 			if current.value==value:
 				return current
 			current=current.next
+		return None
 
 	#按值删除节点(删除成功返回True、否则返回False)
 	def removeNode(self,value):
-		#头节点为空链表为空队列,返回False
+		#头节点为空时链表为空,返回False
 		if self.head is None:
 			return False
 		#头节点非空优先判断该节点值是否为value
