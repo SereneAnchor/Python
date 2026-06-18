@@ -9,7 +9,7 @@ class Queue:
 	def enqueueItem(self,value):
 		self.items.append(value)
 
-	#元素出队(不返回队首元素)
+	#元素出队并返回队首元素
 	def dequeueItem(self):
 		if self.isEmpty():
 			return None
