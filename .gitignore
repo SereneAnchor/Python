@@ -3,6 +3,7 @@
 
 #保留.gitignore文件本身
 !/.gitignore
+!/README.md
 
 #只允许上传以下Python学习包
 !/Chapter01_VariableLogic/
