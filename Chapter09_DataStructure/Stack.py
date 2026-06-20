@@ -32,6 +32,6 @@ class Stack:
 		return len(self.items)==0
 
 	#输出栈
-	def printStack(self):
+	def show(self):
 		print(f"输出栈:{self.items}")
 

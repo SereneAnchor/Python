@@ -84,7 +84,7 @@ def testPrintStack(capsys):
 	values=[1,2,3]
 	for value in values:
 		stack.pushItem(value)
-	stack.printStack()
+	stack.show()
 	output=capsys.readouterr().out
 	assert output=="输出栈:[1, 2, 3]\n"
 
