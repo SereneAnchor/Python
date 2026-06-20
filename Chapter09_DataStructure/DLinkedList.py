@@ -2,6 +2,7 @@
 
 #双链表节点
 class Node:
+	#每个节点包含数据域、前向域、后向域
 	def __init__(self,value):
 		self.value=value
 		self.pre=None
@@ -59,12 +60,12 @@ class DLinkedList:
 	def getNode(self,index):
 		if index<0 or index>=self.length:
 			raise IndexError("Index out of range.")
-		#索引落在表的前半段,从头节点遍历获取
+		#索引落在表的前半段,从头节点开始遍历获取
 		if index<self.length//2:
 			current=self.head
 			for i in range(index):
 				current=current.next
-		#索引落在表的后半段,从尾结点遍历获取
+		#索引落在表的后半段,从尾结点开始遍历获取
 		else:
 			current=self.tail
 			for i in range(self.length-1-index):
@@ -127,10 +128,13 @@ class DLinkedList:
 	def popHead(self):
 		if self.head is None:
 			return None
+		#保存头节点的value
 		value=self.head.value
+		#双链表中只有一个节点
 		if self.head is self.tail:
 			self.head=None
 			self.tail=None
+		#双链表中至少有两个节点
 		else:
 			self.head=self.head.next
 			self.head.pre=None
@@ -140,15 +144,15 @@ class DLinkedList:
 
 	#移除尾结点并返回值
 	def popTail(self):
-
 		if self.tail is None:
 			return None
+		#保存尾节点的value
 		value=self.tail.value
-
+		#双链表中只有一个节点
 		if self.head is self.tail:
 			self.head=None
 			self.tail=None
-
+		#双链表中至少有两个节点
 		else:
 			self.tail=self.tail.pre
 			self.tail.next=None
@@ -158,25 +162,27 @@ class DLinkedList:
 
 	#根据value移除节点
 	def removeNode(self,value):
+		#找到目标节点
 		targetNode=self.findNode(value)
 		if targetNode is None:
 			return False
+		#目标节点为头节点时采用头删法
 		if targetNode is self.head:
 			self.popHead()
 			return True
+		#目标节点为尾节点时采用尾删法
 		if targetNode is self.tail:
 			self.popTail()
 			return True
-
+		#目标节点为中间节点
 		preNode=targetNode.pre
 		nextNode=targetNode.next
-
+		#断开目标节点
 		preNode.next=nextNode
 		nextNode.pre=preNode
 		#双链表长度-1
 		self.length-=1
 		return True
-
 
 	#获取双链表长度
 	def getLength(self):
@@ -192,8 +198,8 @@ class DLinkedList:
 		self.tail=None
 		self.length=0
 
-	#输出双链表
-	def valueToList(self):
+	#从头节点向后遍历并返回节点值列表
+	def forwardToValue(self):
 		values=[]
 		current=self.head
 		while current is not None:
@@ -201,8 +207,9 @@ class DLinkedList:
 			current=current.next
 		return values
 
-	#反转双链表
-	def reverseList(self):
+	#从尾节点向前遍历并返回节点值列表
+	def backwardToValue(self):
+		#使用列表保存各个节点的value
 		values=[]
 		current=self.tail
 		while current is not None:
@@ -212,60 +219,8 @@ class DLinkedList:
 
 	#前向输出双链表
 	def forwardPrintList(self):
-		print(f"前向输出:{self.valueToList()}")
+		print(f"前向输出:{self.forwardToValue()}")
 
 	#反向输出双链表
 	def backwardPrintList(self):
-		print(f"反向输出:{self.reverseList()}")
-
-if __name__=="__main__":
-	#创建双链表
-	dLinkedList=DLinkedList()
-	print(f"双链表为空:{dLinkedList.isEmpty()}")
-
-	#尾插元素
-	dLinkedList.appendNode('C++')
-	dLinkedList.appendNode('Python')
-	dLinkedList.appendNode('Java')
-	dLinkedList.appendNode('SQL')
-	dLinkedList.forwardPrintList()
-	dLinkedList.backwardPrintList()
-
-	#头插元素
-	dLinkedList.prependNode('C#')
-	dLinkedList.forwardPrintList()
-
-	#判断是否包含值为C#、Go的节点
-	print(f"Contains C#:{dLinkedList.isContainsValue('C#')}")
-	print(f"Contains Go:{dLinkedList.isContainsValue('Go')}")
-
-	#查找指定索引的节点值
-	print(f"Index 1:{dLinkedList.getNodeValue(1)}")
-	try:
-		print(f"Index 5:{dLinkedList.getNodeValue(5)}")
-	except IndexError as error:
-		print(f"Index 5:{error}")
-
-	#指定节点值的后插、前插
-	dLinkedList.insertAfterNode("C++","HTML")
-	dLinkedList.insertBeforeNode("Java","Rust")
-	dLinkedList.forwardPrintList()
-
-	#修改索引为1的节点值
-	dLinkedList.modifyNodeValue(1,"Pascal")
-	dLinkedList.forwardPrintList()
-
-	#移除指定值的节点、移除头尾节点并返回值
-	print(f"Remove C#:{dLinkedList.removeNode('C#')}")
-	print(f"Pop  Head:{dLinkedList.popHead()}")
-	print(f"Pop  Tail:{dLinkedList.popTail()}")
-	dLinkedList.forwardPrintList()
-
-
-	print(f"双链表长度:{dLinkedList.getLength()}")
-
-	#清空双链表
-	dLinkedList.clearList()
-	print(f"双链表为空:{dLinkedList.isEmpty()}")
-
-
+		print(f"反向输出:{self.backwardToValue()}")
