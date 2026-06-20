@@ -162,10 +162,10 @@ def testRemoveOnlyNode():
 #测试输出空链表和非空链表时显示的内容是否正确
 def testPrintLinkedList(capsys):
 	linkedList=LinkedList()
-	linkedList.printLinkedList()
+	linkedList.show()
 	for value in [1,2,3]:
 		linkedList.appendNode(value)
-	linkedList.printLinkedList()
+	linkedList.show()
 	output=capsys.readouterr().out
 	assert output=="输出链表:[]\n输出链表:[1, 2, 3]\n"
 

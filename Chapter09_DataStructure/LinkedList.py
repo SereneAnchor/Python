@@ -68,7 +68,7 @@ class LinkedList:
 		return self.head is None
 
 	#输出链表
-	def printLinkedList(self):
+	def show(self):
 		values=[]
 		current=self.head
 		#头节点不为空时,将每个节点的value值加入到列表中
