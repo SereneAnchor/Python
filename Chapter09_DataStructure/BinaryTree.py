@@ -67,7 +67,7 @@ class BinaryTree:
 		return None
 
 	#判断是否包含值为value的节点
-	def containsValue(self,value):
+	def containsNode(self,value):
 		return self.findNode(value) is not None
 
 	#对二叉树进行前序遍历:根-左-右
@@ -133,7 +133,7 @@ class BinaryTree:
 		#返回一个保存各个节点值的列表
 		return result
 
-	#计算二叉树的高度
+	#获取二叉树的高度
 	def getHeight(self):
 		return self.__getHeight__(self.root)
 
@@ -179,7 +179,7 @@ class BinaryTree:
 			return None
 		return max(values)
 
-	#按值移除节点:用最深最右节点的值覆盖目标节点,再断开最深最右节点,从而保持完全二叉树结构
+	#按值删除节点:用最深最右节点的值覆盖目标节点,再断开最深最右节点,从而保持完全二叉树结构
 	def removeNode(self,value):
 		#空树移除失败,返回False
 		if self.root is None:

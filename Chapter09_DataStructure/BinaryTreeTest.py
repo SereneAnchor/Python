@@ -55,7 +55,7 @@ def testEmptyBinaryTree():
 	assert tree.root is None
 	assert tree.isEmpty()
 	assert tree.findNode(1) is None
-	assert not tree.containsValue(1)
+	assert not tree.containsNode(1)
 	assert tree.preOrder()==[]
 	assert tree.inOrder()==[]
 	assert tree.postOrder()==[]
@@ -123,10 +123,10 @@ def testContainsValue():
 	tree=BinaryTree()
 	for value in [10,20,30]:
 		tree.insertNode(value)
-	assert tree.containsValue(10)
-	assert tree.containsValue(20)
-	assert tree.containsValue(30)
-	assert not tree.containsValue(40)
+	assert tree.containsNode(10)
+	assert tree.containsNode(20)
+	assert tree.containsNode(30)
+	assert not tree.containsNode(40)
 
 
 #测试前序、中序、后序和层序遍历结果
@@ -230,7 +230,7 @@ def testRemoveInternalNode():
 	assert tree.removeNode(2)
 	assert targetNode.value==6
 	assert tree.levelOrder()==[1,6,3,4,5]
-	assert not tree.containsValue(2)
+	assert not tree.containsNode(2)
 	assert tree.getNodeCount()==5
 	assert isCompleteBinaryTree(tree)
 
@@ -310,7 +310,7 @@ def testRandomOperationsAgainstList():
 				expectedResult=False
 			assert tree.removeNode(value)==expectedResult
 		elif operation==3:
-			assert tree.containsValue(value)==(value in values)
+			assert tree.containsNode(value)==(value in values)
 			node=tree.findNode(value)
 			if value in values:
 				assert node is not None
