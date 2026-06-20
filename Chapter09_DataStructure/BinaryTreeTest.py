@@ -277,7 +277,7 @@ def testClearTree():
 	tree=BinaryTree()
 	for value in range(1,20):
 		tree.insertNode(value)
-	tree.clearTree()
+	tree.clear()
 	assert tree.root is None
 	assert tree.isEmpty()
 	assert tree.preOrder()==[]
@@ -319,7 +319,7 @@ def testRandomOperationsAgainstList():
 				assert node is None
 		else:
 			if randomGenerator.random()<0.03:
-				tree.clearTree()
+				tree.clear()
 				values.clear()
 
 		assert tree.levelOrder()==values

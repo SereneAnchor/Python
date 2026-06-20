@@ -223,7 +223,7 @@ class BinaryTree:
 		return True
 
 	#清空二叉树
-	def clearTree(self):
+	def clear(self):
 		self.root=None
 
 
