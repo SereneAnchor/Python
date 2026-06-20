@@ -102,7 +102,7 @@ def testPrintQueue(capsys):
 	values=[1,2,3]
 	for value in values:
 		queue.enqueueItem(value)
-	queue.printQueue()
+	queue.show()
 	output=capsys.readouterr().out
 	assert output=="输出队列:[1, 2, 3]\n"
 

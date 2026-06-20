@@ -30,6 +30,6 @@ class Queue:
 		return len(self.items)==0
 
 	#输出队列
-	def printQueue(self):
+	def show(self):
 		print(f"输出队列:{self.items}")
 
