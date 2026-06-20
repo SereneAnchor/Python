@@ -174,7 +174,7 @@ def testClearTable():
 	for key in range(10):
 		hashTable.setItem(key,key)
 	currentCapacity=hashTable.capacity
-	hashTable.clearTable()
+	hashTable.clear()
 	assert hashTable.capacity==currentCapacity
 	assert hashTable.getLength()==0
 	assert hashTable.isEmpty()
@@ -189,7 +189,7 @@ def testPrintTable(capsys):
 	hashTable=HashTable(4)
 	hashTable.setItem(0,"a")
 	hashTable.setItem(4,"b")
-	hashTable.printTable()
+	hashTable.show()
 	output=capsys.readouterr().out
 	expected=("第0个桶[[0, 'a'], [4, 'b']]\n"
 			  "第1个桶[]\n"
@@ -220,7 +220,7 @@ def testRandomOperationsAgainstDict():
 			assert myTable.removeItem(key)==expectedValue
 		else:
 			if randomGenerator.random()<0.02:
-				myTable.clearTable()
+				myTable.clear()
 				standardTable.clear()
 		assert myTable.getLength()==len(standardTable)
 		assert myTable.isEmpty()==(len(standardTable)==0)

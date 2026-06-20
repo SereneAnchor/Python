@@ -133,12 +133,12 @@ class HashTable:
 		return result
 
 	#清空哈希表,但要保留当前capacity
-	def clearTable(self):
+	def clear(self):
 		self.buckets=[ [] for i in range(self.capacity)]
 		self.length=0
 
 	#输出哈希表(enumerate返回一对值:下标+元素)
-	def printTable(self):
+	def show(self):
 		#输出每个桶的内容(桶的编号:桶的数据),观察哈希冲突和内部结构
 		for index,bucket in enumerate(self.buckets):
 			print(f"第{index}个桶{bucket}")
