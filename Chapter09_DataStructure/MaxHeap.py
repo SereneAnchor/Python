@@ -108,13 +108,13 @@ class MaxHeap:
 		return len(self.items)
 
 	#以数组形式输出堆
-	def printHeap(self):
+	def show(self):
 		print(self.items)
 
 	#以树的形式输出堆
-	def printTree(self,index=0,level=0):
+	def showTree(self,index=0,level=0):
 		if index>=len(self.items):
 			return
-		self.printTree(self.getRightChild(index),level+1)
+		self.showTree(self.getRightChild(index),level+1)
 		print("  "*level+str(self.items[index]))
-		self.printTree(self.getLeftChild(index),level+1)
+		self.showTree(self.getLeftChild(index),level+1)
