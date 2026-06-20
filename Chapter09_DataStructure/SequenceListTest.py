@@ -138,7 +138,7 @@ def testPrintList(capsys):
 	values=[1,2,3]
 	for value in values:
 		sequenceList.appendItem(value)
-	sequenceList.printList()
+	sequenceList.show()
 	output=capsys.readouterr().out
 	assert output=="输出顺序表:[1, 2, 3]\n"
 

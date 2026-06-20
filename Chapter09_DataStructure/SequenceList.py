@@ -50,5 +50,5 @@ class SequenceList:
 		return len(self.items)==0
 
 	#输出顺序表(无return时默认返回None)
-	def printList(self):
+	def show(self):
 		print(f"输出顺序表:{self.items}")
