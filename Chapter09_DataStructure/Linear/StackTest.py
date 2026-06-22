@@ -1,6 +1,6 @@
 import random
 
-from Chapter09_DataStructure.Stack import Stack
+from Chapter09_DataStructure.Linear.Stack import Stack
 
 
 #测试新建栈的初始状态是否正确

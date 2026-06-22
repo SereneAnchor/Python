@@ -2,7 +2,7 @@ import random
 
 import pytest
 
-from Chapter09_DataStructure.HashTable import HashTable
+from Chapter09_DataStructure.Hash.HashTable import HashTable
 
 
 #构造具有相同哈希值的键,用于测试哈希冲突

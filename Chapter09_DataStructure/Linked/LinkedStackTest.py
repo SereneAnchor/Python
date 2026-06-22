@@ -1,6 +1,6 @@
 import random
 
-from Chapter09_DataStructure.LinkedStack import LinkedStack,Node
+from Chapter09_DataStructure.Linked.LinkedStack import LinkedStack,Node
 
 
 #检查链栈的节点顺序、长度以及是否存在循环

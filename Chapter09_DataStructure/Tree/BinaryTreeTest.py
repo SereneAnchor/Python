@@ -1,6 +1,6 @@
 import random
 
-from Chapter09_DataStructure.BinaryTree import BinaryTree,TreeNode
+from Chapter09_DataStructure.Tree.BinaryTree import BinaryTree,TreeNode
 
 
 #将树中的节点按层序转换为节点对象列表

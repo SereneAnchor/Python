@@ -1,7 +1,7 @@
 import random
 from collections import deque
 
-from Chapter09_DataStructure.Queue import Queue
+from Chapter09_DataStructure.Linear.Queue import Queue
 
 
 #测试新建队列的初始状态是否正确

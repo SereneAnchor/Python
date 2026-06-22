@@ -2,7 +2,7 @@ import random
 
 import pytest
 
-from Chapter09_DataStructure.SequenceList import SequenceList
+from Chapter09_DataStructure.Linear.SequenceList import SequenceList
 
 
 #测试新建顺序表的初始状态是否正确

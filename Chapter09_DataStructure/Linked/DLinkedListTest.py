@@ -2,7 +2,7 @@ import random
 
 import pytest
 
-from Chapter09_DataStructure.DLinkedList import DLinkedList,Node
+from Chapter09_DataStructure.Linked.DLinkedList import DLinkedList,Node
 
 
 #检查双链表的正向、反向连接以及长度是否一致

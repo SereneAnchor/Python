@@ -1,6 +1,6 @@
 import random
 
-from Chapter09_DataStructure.LinkedQueue import LinkedQueue,Node
+from Chapter09_DataStructure.Linked.LinkedQueue import LinkedQueue,Node
 
 
 #检查链队的节点顺序、头尾指针、长度以及是否存在循环

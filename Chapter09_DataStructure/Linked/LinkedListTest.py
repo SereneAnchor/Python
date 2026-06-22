@@ -1,6 +1,6 @@
 import random
 
-from Chapter09_DataStructure.LinkedList import LinkedList,Node
+from Chapter09_DataStructure.Linked.LinkedList import LinkedList,Node
 
 
 #将链表中的所有节点值转换成Python列表,同时检查链表中是否存在环
