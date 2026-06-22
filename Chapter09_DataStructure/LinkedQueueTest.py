@@ -230,7 +230,7 @@ def testRandomOperationsAgainstList():
 	linkedQueue=LinkedQueue()
 	values=[]
 
-	for _ in range(10000):
+	for i in range(10000):
 		operation=randomGenerator.randint(0,4)
 
 		if operation<=1:

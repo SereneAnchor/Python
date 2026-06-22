@@ -18,7 +18,7 @@ class LinkedQueue:
 		if self.tail is None:
 			self.head=node
 			self.tail=node
-		#否则让原队尾指向新节点
+		#把新节点添加到队尾,让原队尾指向新节点
 		else:
 			self.tail.next=node
 			self.tail=node
