@@ -1,6 +1,7 @@
-#LRUCache
+#LRUCache:最近最少使用缓存,哈希表+双向链表
 
 class CacheNode:
+	#缓存节点包括:数据的键、数据的值、指向前后节点的指针
 	def __init__(self,key=None,value=None):
 		self.key=key
 		self.value=value
@@ -8,7 +9,7 @@ class CacheNode:
 		self.next=None
 
 class LRUCache:
-	#
+	#管理最大容量、根据key快速找到节点的字典、双向链表的虚拟头尾节点
 	def __init__(self,capacity=8):
 		self.capacity=capacity
 		self.cache={}
