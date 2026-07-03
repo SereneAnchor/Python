@@ -20,6 +20,7 @@ class Duck(Animal):
 	def speak(self):
 		print(f"{self.name} speak.")
 
+#以不同的子类对象初始化父类对象
 def test(animal:Animal):
 	animal.speak()
 

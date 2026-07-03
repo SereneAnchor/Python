@@ -3,7 +3,7 @@
   列表(list,有序可变集合)、元组(tuple,有序不可变集合)、字典(dict,键值对集合)
 """
 age=20
-price=18.5
+weight=68.5
 str1="Python"
 str2='python'
 flag=True
@@ -49,15 +49,15 @@ print("姓名:{}\t年龄:{}\t".format(name,age))
 print(f"手机号:{phone},类型:{type(phone)}")
 
 #6、数据类型转换:对于输入的字符串进行数值计算时需要进行类型转换
-'''
+"""
 	int(x)   将x转为整数       int("100")->100
 	float(x) 将x转为浮点数	     float("3.14")->3.14	
 	str(x)   将x转为字符串      str(18)->"18"
 	eval(x)  执行字符串表达式    eval("1+2")->3 
-'''
+"""
 productName=input("输入商品名称:")
 productPrice=input("输入商品单价:")
-productCount=input("输入商品数量")
+productCount=input("输入商品数量:")
 price=float(productPrice)
 count=int(productCount)
 sumPrice=price*count

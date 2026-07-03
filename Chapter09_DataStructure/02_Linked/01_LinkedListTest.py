@@ -1,6 +1,13 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Linked.LinkedList import LinkedList,Node
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.02_Linked.01_LinkedList")
+LinkedList=module.LinkedList
+Node=module.Node
 
 
 #将链表中的所有节点值转换成Python列表,同时检查链表中是否存在环

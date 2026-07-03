@@ -1,6 +1,13 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Linked.LinkedStack import LinkedStack,Node
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.02_Linked.03_LinkedStack")
+LinkedStack=module.LinkedStack
+Node=module.Node
 
 
 #检查链栈的节点顺序、长度以及是否存在循环

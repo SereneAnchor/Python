@@ -1,6 +1,13 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Tree.BinaryTree import BinaryTree,TreeNode
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.05_Tree.01_BinaryTree")
+BinaryTree=module.BinaryTree
+TreeNode=module.TreeNode
 
 
 #将树中的节点按层序转换为节点对象列表

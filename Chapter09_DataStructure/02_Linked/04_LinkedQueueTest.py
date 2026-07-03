@@ -1,6 +1,13 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Linked.LinkedQueue import LinkedQueue,Node
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.02_Linked.04_LinkedQueue")
+LinkedQueue=module.LinkedQueue
+Node=module.Node
 
 
 #检查链队的节点顺序、头尾指针、长度以及是否存在循环

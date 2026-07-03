@@ -1,7 +1,13 @@
 import random
 from collections import deque
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Linear.Queue import Queue
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.01_Linear.03_Queue")
+Queue=module.Queue
 
 
 #测试新建队列的初始状态是否正确

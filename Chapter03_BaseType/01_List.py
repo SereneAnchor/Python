@@ -2,6 +2,7 @@
 
 listA=['B','X','P','B','X','B']
 print(f"listA is:{listA}")
+
 #1.index:查询指定元素在列表中的下标,如果不存在直接报错
 index=listA.index('P')
 print(f"index P:{index}")
@@ -16,7 +17,7 @@ print(f"exist W:{bool}")
 bool='X' in listA
 print(f"exist X:{bool}")
 
-print(f"======== add ========")
+print(f"======== append ========")
 #4.append:将指定元素增加到列表中
 if 'G' not in listA:
 	listA.append('G')

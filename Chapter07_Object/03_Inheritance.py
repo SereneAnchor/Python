@@ -36,7 +36,7 @@ class Animal:
 class Cat(Animal):
 	pass
 
-class Dog(Person):
+class Dog(Animal):
 	#Dog的构造方法会覆盖掉Animal的同名构造方法,创建对象时只调用Dog的构造方法而不会调用Animal的构造方法
 	def __init__(self,name,age):
 		self.name=name
@@ -64,6 +64,7 @@ print(bird.name,bird.age,bird.type)
 
 #Bird调用Animal的私有方法,Bird.__dict__看不到Animal的私有方法,_Animal__Roar被Bird继承了
 bird._Animal__Roar()
+dog._Animal__Roar()
 
 
 #多继承:C同时继承A、B
@@ -78,6 +79,7 @@ class BaseB:
 class C(BaseA,BaseB):
 	pass
 
+#先继承哪个类,就先调用哪个类的方法
 c=C()
 c.showInfo()
 print(C.__mro__)

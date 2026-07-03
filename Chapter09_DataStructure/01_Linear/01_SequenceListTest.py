@@ -1,8 +1,14 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
 import pytest
 
-from Chapter09_DataStructure.Linear.SequenceList import SequenceList
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.01_Linear.01_SequenceList")
+SequenceList=module.SequenceList
 
 
 #测试新建顺序表的初始状态是否正确

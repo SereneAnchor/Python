@@ -30,6 +30,7 @@ print(f"{student.name}的成绩为:{student.getScore()}")
 student.setScore(-100)
 print(f"{student.name}的成绩为:{student.getScore()}")
 
+#对象无法调用类的私有方法,私有方法被改名了
 student._Student__showInfo()
 
 #查看对象属性和类的方法(私有属性和方法都被改名了)

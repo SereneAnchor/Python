@@ -1,4 +1,4 @@
-#Like继承
+#like继承
 
 class Bird:
 	def fly(self):
@@ -9,7 +9,7 @@ class Eagle(Bird):
 	def fly(self):
 		print(f"Eagle fly.")
 
-#like继承
+#like继承,飞机也会飞但不是鸟的派生
 class Plane:
 	def fly(self):
 		print(f"Plane fly.")

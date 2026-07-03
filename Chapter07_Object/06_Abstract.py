@@ -1,6 +1,7 @@
-#抽象方法:方法中没有具体实现,只写pass
-
-#抽象类:类中只有抽象方法
+"""
+	抽象方法:方法中没有具体实现,只写pass
+	抽象类:类中只有抽象方法
+"""
 
 class NoteBook:
 	def show(self):
@@ -33,6 +34,7 @@ class MyNoteBook(NoteBook):
 	def show(self):
 		print(f"我的 show.")
 
+#以不同的子类对象初始化父类对象
 def test(notebook:NoteBook):
 	notebook.show()
 	notebook.cpuCompute()

@@ -1,8 +1,14 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
 import pytest
 
-from Chapter09_DataStructure.Hash.HashTable import HashTable
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.03_Hash.01_HashTable")
+HashTable=module.HashTable
 
 
 #构造具有相同哈希值的键,用于测试哈希冲突

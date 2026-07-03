@@ -1,8 +1,15 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
 import pytest
 
-from Chapter09_DataStructure.Linked.DLinkedList import DLinkedList,Node
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.02_Linked.02_DLinkedList")
+DLinkedList=module.DLinkedList
+Node=module.Node
 
 
 #检查双链表的正向、反向连接以及长度是否一致

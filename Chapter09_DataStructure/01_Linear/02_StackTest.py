@@ -1,6 +1,12 @@
 import random
+from importlib import import_module
+from pathlib import Path
+import sys
 
-from Chapter09_DataStructure.Linear.Stack import Stack
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+
+module=import_module("Chapter09_DataStructure.01_Linear.02_Stack")
+Stack=module.Stack
 
 
 #测试新建栈的初始状态是否正确

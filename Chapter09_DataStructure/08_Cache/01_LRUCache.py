@@ -18,14 +18,18 @@ class LRUCache:
 		self.head.next=self.tail
 		self.tail.pre=self.head
 
-	#
+	#移除双向链表中指定的node节点
 	def removeNode(self,node):
+		#node前向节点的next指向node后向节点
 		node.pre.next=node.next
+		#node后向节点的pre指向node前向节点
 		node.next.pre=node.pre
 
-	#
+	#将node节点添加到头部
 	def addToHead(self,node):
+		#node的next指向原来的头部节点
 		node.next=self.head.next
+		#node的pre指向
 		node.pre=self.head
 		self.head.next.pre=node
 		self.head.next=node
@@ -118,7 +122,7 @@ class LRUCache:
 			current=current.next
 		print(f"MRU [{','.join(pairs)}] LRU")
 
-	#
+	#清空缓存
 	def clear(self):
 		self.cache.clear()
 		self.head.next=self.tail

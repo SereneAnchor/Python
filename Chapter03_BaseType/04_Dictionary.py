@@ -20,16 +20,14 @@ person={'name':'张三','sex':'male','age':20,'num':250}
 del person['age']
 print(f"person:{person}")
 
-#2.clear:清除字典中的所有key
-#person.clear()
+#2.clear:清除字典中的所有key,person.clear()
 print(f"person:{person}")
 
 #3.根据键修改对应的值
 person['num']=438
 print(f"person:{person}")
 
-#4.查询方法
-#keys:以列表形式返回字典的所有key、values:以列表形式返回字典的所有值、items:以列表形式返回可遍历的键值对
+#4.查询方法,keys:以列表形式返回字典的所有key、values:以列表形式返回字典的所有值、items:以列表形式返回可遍历的键值对
 list1=person.keys()
 print(f"list1:{list1}")
 list2=person.values()

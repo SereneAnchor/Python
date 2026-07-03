@@ -36,7 +36,7 @@ class Cat(Animal):
 		self.age=age
 
 	def showInfo(self):
-		super().showInfo()
+		Animal.showInfo(self)
 		print(f"{self.name} showInfo.")
 
 cat=Cat('橘猫',2.5)
