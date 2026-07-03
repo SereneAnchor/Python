@@ -2,7 +2,7 @@
 
 [中文](#python-学习记录) | [English](#english-version)
 
-这是我的 Python 学习记录仓库，用来保存从基础语法到小项目实践过程中的代码、示例和练习内容。
+这是我的 Python 学习记录仓库，用来保存从基础语法、面向对象、文件操作，到数据结构和小项目实践过程中的代码、示例和测试内容。
 
 仓库按照学习阶段进行目录划分，每个目录对应一个主题，便于后续复习、整理和继续扩展。
 
@@ -10,64 +10,37 @@
 
 ```text
 Python/
-├─ 01_VariableLogic/      # 变量、条件判断、逻辑运算
-├─ 02_LoopControl/        # for 循环、while 循环
-├─ 03_BaseType/           # 列表、字典、元组、集合等基础数据类型
-├─ 04_Function/           # 函数、lambda、解包、推导式、作用域
-├─ 05_File/               # 文件读写、异常处理、CSV、JSON、配置和日志
-├─ 06_OllamaChat/         # 基于 Ollama 和 Streamlit 的 AI 聊天助手练习
-├─ 07_Object/             # 面向对象编程：类、对象、封装、继承、多态等
-└─ main.py                # 根目录示例入口
+├─ Chapter01_VariableControl/    # 变量、条件判断、逻辑控制
+├─ Chapter02_LoopControl/        # for 循环、while 循环
+├─ Chapter03_BaseType/           # 列表、字典、元组、集合、字符串等基础类型
+├─ Chapter04_Function/           # 函数、lambda、解包、推导式、作用域
+├─ Chapter05_File/               # 文件读写、异常处理、CSV、JSON、配置和日志
+├─ Chapter06_OllamaChat/         # 基于 Ollama 和 Streamlit 的 AI 聊天助手练习
+├─ Chapter07_Object/             # 面向对象编程：类、对象、封装、继承、多态等
+├─ Chapter09_DataStructure/      # 数据结构实现与测试
+├─ AAA/                          # 数据结构相关整理文件
+└─ main.py                       # 根目录示例入口
 ```
 
 ## 学习内容
 
-### 01_VariableLogic
+### Chapter01_VariableControl
 
-主要记录 Python 基础语法中的变量、简单案例和逻辑运算。
+主要记录 Python 基础语法中的变量、条件判断和逻辑控制。
 
-包含内容：
+### Chapter02_LoopControl
 
-- 变量定义与使用
-- 条件判断
-- 逻辑运算
-- 基础练习案例
+主要记录循环控制相关内容，包括 `for` 循环、`while` 循环和基础循环逻辑。
 
-### 02_LoopControl
+### Chapter03_BaseType
 
-主要记录循环控制相关内容。
+主要记录 Python 常见基础数据类型的使用，包括列表、字典、元组、集合和字符串等内容。
 
-包含内容：
+### Chapter04_Function
 
-- `for` 循环
-- `while` 循环
-- 循环中的基础控制逻辑
+主要记录函数相关知识点，包括函数定义、lambda 表达式、变量作用域、序列解包和推导式。
 
-### 03_BaseType
-
-主要记录 Python 常见基础数据类型的使用。
-
-包含内容：
-
-- `list` 列表
-- `dict` 字典
-- `tuple` 元组
-- `set` 集合
-- 基础数据类型练习
-
-### 04_Function
-
-主要记录函数相关知识点。
-
-包含内容：
-
-- 函数定义与调用
-- lambda 表达式
-- 变量作用域
-- 序列解包
-- 推导式
-
-### 05_File
+### Chapter05_File
 
 主要记录文件操作和常见数据格式处理。
 
@@ -81,7 +54,7 @@ Python/
 - 配置文件管理
 - 简单日志系统
 
-### 06_OllamaChat
+### Chapter06_OllamaChat
 
 这是一个 AI 聊天助手练习项目，主要用于学习 Streamlit 页面开发，以及通过 Ollama 调用本地大模型。
 
@@ -91,24 +64,39 @@ Python/
 - 聊天消息展示
 - 会话状态管理
 - Ollama 接口调用封装
-- 图标和页面组件练习
+- 页面组件练习
 
-### 07_Object
+### Chapter07_Object
 
 主要记录 Python 面向对象编程相关内容。
 
 包含内容：
 
 - 类与对象
-- 构造方法
-- 实例属性和实例方法
-- 类属性和类方法
-- 静态方法
 - 封装
 - 继承
 - 方法重写
 - 多态
-- 面向对象练习案例
+- 抽象类和抽象方法
+- 魔法方法
+- 单例模式
+- 类方法和静态方法
+- 闭包和装饰器
+
+### Chapter09_DataStructure
+
+主要记录常见数据结构的手写实现和对应测试。
+
+当前包含内容：
+
+- 线性结构：顺序表、栈、队列
+- 链式结构：单链表、双链表、链栈、链队
+- 哈希：哈希表
+- 堆：最大堆、最小堆
+- 树：二叉树、二叉搜索树
+- 并查集
+- 图
+- 缓存：LRU 缓存
 
 ## 运行方式
 
@@ -123,10 +111,16 @@ python main.py
 运行某个具体练习文件，例如：
 
 ```bash
-python Chapter03_BaseType/SequenceList.py
+python Chapter03_BaseType/01_List.py
 ```
 
-如果运行 `06_OllamaChat` 中的 Streamlit 项目，需要先安装依赖：
+运行数据结构测试文件，例如：
+
+```bash
+python Chapter09_DataStructure/03_Hash/01_HashTableTest.py
+```
+
+如果运行 `Chapter06_OllamaChat` 中的 Streamlit 项目，需要先安装依赖：
 
 ```bash
 pip install streamlit requests
@@ -154,9 +148,9 @@ streamlit run Chapter06_OllamaChat/FrontendSimplify.py
 
 ## 后续计划
 
-- 补充每个阶段的学习笔记
+- 补充图的 BFS 和 DFS
+- 完善部分数据结构的测试文件
 - 整理代码注释和示例说明
-- 为较完整的小项目单独补充 README
 - 持续增加 Python 进阶内容和项目实践
 
 ---
@@ -165,7 +159,7 @@ streamlit run Chapter06_OllamaChat/FrontendSimplify.py
 
 [中文](#python-学习记录) | [English](#english-version)
 
-This repository records my Python learning journey, including code examples, practice scripts, and small projects from basic syntax to practical development.
+This repository records my Python learning journey, including code examples, practice scripts, data structure implementations, tests, and small projects.
 
 The repository is organized by learning stages. Each folder focuses on one topic so that the learning path is easy to review, maintain, and extend.
 
@@ -173,35 +167,37 @@ The repository is organized by learning stages. Each folder focuses on one topic
 
 ```text
 Python/
-├─ 01_VariableLogic/      # Variables, conditions, and logical operations
-├─ 02_LoopControl/        # for loops and while loops
-├─ 03_BaseType/           # Lists, dictionaries, tuples, sets, and basic data types
-├─ 04_Function/           # Functions, lambda, unpacking, comprehensions, and scope
-├─ 05_File/               # File I/O, exceptions, CSV, JSON, config, and logging
-├─ 06_OllamaChat/         # AI chatbot practice with Ollama and Streamlit
-├─ 07_Object/             # Object-oriented programming: classes, objects, inheritance, polymorphism
-└─ main.py                # Root demo entry
+├─ Chapter01_VariableControl/    # Variables, conditions, and logic control
+├─ Chapter02_LoopControl/        # for loops and while loops
+├─ Chapter03_BaseType/           # Lists, dictionaries, tuples, sets, strings, and basic types
+├─ Chapter04_Function/           # Functions, lambda, unpacking, comprehensions, and scope
+├─ Chapter05_File/               # File I/O, exceptions, CSV, JSON, config, and logging
+├─ Chapter06_OllamaChat/         # AI chatbot practice with Ollama and Streamlit
+├─ Chapter07_Object/             # Object-oriented programming
+├─ Chapter09_DataStructure/      # Data structure implementations and tests
+├─ AAA/                          # Data structure related notes and drafts
+└─ main.py                       # Root demo entry
 ```
 
 ## Learning Topics
 
-### 01_VariableLogic
+### Chapter01_VariableControl
 
-This section covers Python variables, simple cases, conditions, and logical operations.
+This section covers Python variables, conditions, and basic logic control.
 
-### 02_LoopControl
+### Chapter02_LoopControl
 
-This section covers loop control, including `for` loops and `while` loops.
+This section covers loop control, including `for` loops, `while` loops, and basic loop logic.
 
-### 03_BaseType
+### Chapter03_BaseType
 
-This section covers common Python data types, including `list`, `dict`, `tuple`, and `set`.
+This section covers common Python data types, including lists, dictionaries, tuples, sets, and strings.
 
-### 04_Function
+### Chapter04_Function
 
 This section covers function-related topics, including function definitions, lambda expressions, variable scope, sequence unpacking, and comprehensions.
 
-### 05_File
+### Chapter05_File
 
 This section covers file operations and common data formats.
 
@@ -215,7 +211,7 @@ Main topics:
 - Config file management
 - Simple logging system
 
-### 06_OllamaChat
+### Chapter06_OllamaChat
 
 This is an AI chatbot practice project. It is mainly used to learn Streamlit page development and how to call a local large language model through Ollama.
 
@@ -225,24 +221,39 @@ Main topics:
 - Chat message display
 - Session state management
 - Ollama API wrapper
-- Icons and page component practice
+- Page component practice
 
-### 07_Object
+### Chapter07_Object
 
 This section covers Python object-oriented programming.
 
 Main topics:
 
 - Classes and objects
-- Constructors
-- Instance attributes and instance methods
-- Class attributes and class methods
-- Static methods
 - Encapsulation
 - Inheritance
 - Method overriding
 - Polymorphism
-- Object-oriented practice cases
+- Abstract classes and abstract methods
+- Magic methods
+- Singleton pattern
+- Class methods and static methods
+- Closures and decorators
+
+### Chapter09_DataStructure
+
+This section records handwritten implementations and tests for common data structures.
+
+Current topics:
+
+- Linear structures: sequence list, stack, queue
+- Linked structures: singly linked list, doubly linked list, linked stack, linked queue
+- Hash: hash table
+- Heap: max heap, min heap
+- Tree: binary tree, binary search tree
+- Union find
+- Graph
+- Cache: LRU cache
 
 ## How to Run
 
@@ -257,10 +268,16 @@ python main.py
 Run a specific practice file:
 
 ```bash
-python Chapter03_BaseType/SequenceList.py
+python Chapter03_BaseType/01_List.py
 ```
 
-To run the Streamlit project in `06_OllamaChat`, install the dependencies first:
+Run a data structure test file:
+
+```bash
+python Chapter09_DataStructure/03_Hash/01_HashTableTest.py
+```
+
+To run the Streamlit project in `Chapter06_OllamaChat`, install the dependencies first:
 
 ```bash
 pip install streamlit requests
@@ -288,7 +305,7 @@ Recommended files to ignore when pushing to GitHub:
 
 ## Future Plans
 
-- Add notes for each learning stage
+- Add BFS and DFS for graph learning
+- Improve tests for some data structures
 - Improve comments and example descriptions
-- Add separate README files for larger practice projects
 - Continue adding advanced Python topics and project practice
