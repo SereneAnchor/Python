@@ -7,7 +7,7 @@ class Student:
 		self.name=name
 		Student.count+=1
 
-	#类方法,可以通过对象和类名来调用
+	#类方法,可以通过对象和类名来调用,cls等价于Student
 	@classmethod
 	def showCount(cls):
 		print(f"学生人数:{cls.count}")

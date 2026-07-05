@@ -23,13 +23,13 @@ if 'G' not in listA:
 	listA.append('G')
 print(f"append G:{listA}")
 
-#5.extend:将列表B追加到列表A中
+#5.extend:将列表B中的逐个元素追加到列表A中,适用于可迭代对象
 listB=['R','S','T']
 print(f" listB  :{listB}")
 listA.extend(listB)
 print(f"extend B:{listA}")
 
-#6.insert:在指定索引处添加新元素
+#6.insert:在指定索引处添加新元素,新元素通常是一个整体
 listA.insert(0,'H')
 print(f"insert H:{listA}")
 
