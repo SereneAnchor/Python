@@ -31,7 +31,7 @@ print(Dog.__mro__)
 #子类调用父类方法:super().父类方法名(参数1,参数2...);	父类名.方法名(self,参数1,参数2...)
 class Cat(Animal):
 	def __init__(self,name,age):
-		#子类中通过super调用父类方法
+		#子类中通过super调用父类方法,等价于self.name=name
 		super().__init__(name)
 		self.age=age
 

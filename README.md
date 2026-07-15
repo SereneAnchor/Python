@@ -17,9 +17,8 @@ Python/
 ├─ Chapter05_File/               # 文件读写、异常处理、CSV、JSON、配置和日志
 ├─ Chapter06_OllamaChat/         # 基于 Ollama 和 Streamlit 的 AI 聊天助手练习
 ├─ Chapter07_Object/             # 面向对象编程：类、对象、封装、继承、多态等
-├─ Chapter09_DataStructure/      # 数据结构实现与测试
-├─ AAA/                          # 数据结构相关整理文件
-└─ main.py                       # 根目录示例入口
+├─ Chapter08_Advanced/           # 闭包、装饰器和多进程等进阶内容
+└─ Chapter09_DataStructure/      # 数据结构实现与测试
 ```
 
 ## 学习内容
@@ -81,7 +80,19 @@ Python/
 - 魔法方法
 - 单例模式
 - 类方法和静态方法
-- 闭包和装饰器
+
+### Chapter08_Advanced
+
+主要记录 Python 进阶语法和并发基础。
+
+包含内容：
+
+- 闭包、自由变量和 `nonlocal`
+- 基础装饰器和装饰器语法糖
+- 带参数装饰器和多个装饰器
+- `functools.wraps` 和函数信息保留
+- 耗时统计、异常捕获和日志装饰器
+- 多进程基础和自定义进程类
 
 ### Chapter09_DataStructure
 
@@ -95,20 +106,14 @@ Python/
 - 堆：最大堆、最小堆
 - 树：二叉树、二叉搜索树
 - 并查集
-- 图
+- 图：基础图、有向图、加权图
 - 缓存：LRU 缓存
 
 ## 运行方式
 
 本仓库中的大部分文件都是独立的 Python 练习脚本，可以直接在 PyCharm 中运行对应的 `.py` 文件。
 
-也可以在命令行中进入项目目录后运行：
-
-```bash
-python main.py
-```
-
-运行某个具体练习文件，例如：
+也可以在命令行中进入项目目录，运行某个具体练习文件，例如：
 
 ```bash
 python Chapter03_BaseType/01_List.py
@@ -145,10 +150,11 @@ streamlit run Chapter06_OllamaChat/FrontendSimplify.py
 - `*.pyc`
 - 日志文件
 - 本地临时文件
+- 暂未整理的 `AAA/`、`Chapter10_/` 和 `Chapter11_/`
 
 ## 后续计划
 
-- 补充图的 BFS 和 DFS
+- 继续完善图结构、遍历算法和测试
 - 完善部分数据结构的测试文件
 - 整理代码注释和示例说明
 - 持续增加 Python 进阶内容和项目实践
@@ -174,9 +180,8 @@ Python/
 ├─ Chapter05_File/               # File I/O, exceptions, CSV, JSON, config, and logging
 ├─ Chapter06_OllamaChat/         # AI chatbot practice with Ollama and Streamlit
 ├─ Chapter07_Object/             # Object-oriented programming
-├─ Chapter09_DataStructure/      # Data structure implementations and tests
-├─ AAA/                          # Data structure related notes and drafts
-└─ main.py                       # Root demo entry
+├─ Chapter08_Advanced/           # Closures, decorators, multiprocessing, and advanced topics
+└─ Chapter09_DataStructure/      # Data structure implementations and tests
 ```
 
 ## Learning Topics
@@ -238,7 +243,19 @@ Main topics:
 - Magic methods
 - Singleton pattern
 - Class methods and static methods
-- Closures and decorators
+
+### Chapter08_Advanced
+
+This section covers advanced Python syntax and multiprocessing basics.
+
+Main topics:
+
+- Closures, free variables, and `nonlocal`
+- Basic decorators and decorator syntax
+- Parameterized decorators and stacked decorators
+- `functools.wraps` and function metadata preservation
+- Timing, exception handling, and logging decorators
+- Multiprocessing basics and custom process classes
 
 ### Chapter09_DataStructure
 
@@ -252,20 +269,14 @@ Current topics:
 - Heap: max heap, min heap
 - Tree: binary tree, binary search tree
 - Union find
-- Graph
+- Graph: basic graph, directed graph, weighted graph
 - Cache: LRU cache
 
 ## How to Run
 
 Most files in this repository are independent Python practice scripts. You can run the corresponding `.py` file directly in PyCharm.
 
-You can also run scripts from the command line:
-
-```bash
-python main.py
-```
-
-Run a specific practice file:
+You can also enter the project directory and run a specific practice file from the command line:
 
 ```bash
 python Chapter03_BaseType/01_List.py
@@ -302,10 +313,11 @@ Recommended files to ignore when pushing to GitHub:
 - `*.pyc`
 - Log files
 - Local temporary files
+- Unfinished `AAA/`, `Chapter10_/`, and `Chapter11_/` directories
 
 ## Future Plans
 
-- Add BFS and DFS for graph learning
+- Continue improving graph structures, traversal algorithms, and tests
 - Improve tests for some data structures
 - Improve comments and example descriptions
 - Continue adding advanced Python topics and project practice

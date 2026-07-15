@@ -74,7 +74,7 @@ class UnionFind:
 		return groups
 
 	#
-	def printCollect(self):
-		print(f"parent:{self.parent}")
-		print(f"rank  :{self.rank}")
-		print(f"Sets  :{self.count}")
+	def show(self):
+		print(f"Parent:{self.parent}")
+		print(f" Rank :{self.rank}")
+		print(f" Sets :{self.count}")

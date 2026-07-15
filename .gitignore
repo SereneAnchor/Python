@@ -6,13 +6,14 @@
 !/README.md
 
 #只允许上传以下Python学习包
-!/Chapter01_VariableLogic/
+!/Chapter01_VariableControl/
 !/Chapter02_LoopControl/
 !/Chapter03_BaseType/
 !/Chapter04_Function/
 !/Chapter05_File/
 !/Chapter06_OllamaChat/
 !/Chapter07_Object/
+!/Chapter08_Advanced/
 !/Chapter09_DataStructure/
 
 #忽略各个包中自动生成的Python缓存文件
@@ -43,4 +44,3 @@
 
 #忽略文件操作练习中自动生成的日志目录
 /Chapter05_File/LogSystem/Logs/
-

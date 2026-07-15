@@ -193,7 +193,7 @@ class DLinkedList:
 		return self.length==0
 
 	#清空双链表
-	def clearList(self):
+	def clear(self):
 		self.head=None
 		self.tail=None
 		self.length=0

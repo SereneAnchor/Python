@@ -9,7 +9,7 @@ class HashTable:
 		#capacity表示桶数组容量,也就是一开始准备多少个桶
 		self.capacity=capacity
 		#buckets是哈希表真正存储数据的地方,一个大列表中的元素又是每一个小列表
-		self.buckets=[ [] for i in range(self.capacity)]
+		self.buckets=[ [] for _ in range(self.capacity)]
 		#length表示哈希表真正保存了多少个键值对
 		self.length=0
 
