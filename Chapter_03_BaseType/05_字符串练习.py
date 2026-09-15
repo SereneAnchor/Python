@@ -4,9 +4,9 @@ import random
 photo='photo.jpg'
 photoName=photo[:5]
 photoEnd=photo[5:]
-print(f"photoName:{photoName}\tphotoEnd:{photoEnd}")
+print(f"文件名称:{photoName}\t文件后缀:{photoEnd}")
 
-#输入一个文件名称,求'.'的索引下标
+#输入一个完整的文件名称,求'.'的索引下标
 fileName=input("输入文件名:")
 position=fileName.find('.')
 print(f"点的位置:{position}")
@@ -14,7 +14,7 @@ print(f"点的位置:{position}")
 #判断某个子串是否在字符串中
 fruits='apple,banana,orange,peach'
 position=fruits.index('apple')
-print(f"子串位置:{position}")
+print(f"子串索引:{position}")
 
 #生成一个6位随机验证码:包含大小写字母、数字
 def generateCode(length=6):

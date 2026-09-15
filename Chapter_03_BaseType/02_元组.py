@@ -5,18 +5,20 @@
 
 #元组API
 tuple=(250,666,"SereneAnchor","王富贵",True,False,250)
-print(f"tuple1:{tuple}")
+print(f"元组:{tuple}")
+print(f"索引为1的元素:{tuple[1]}")
 
 #1.通过索引遍历元组(与遍历字符串、列表一样)
+print(f"遍历元组:",end="")
 for ele in tuple:
-	print(ele,end="\t")
+	print(ele,end=" ")
 print()
 
 #2.index:获取某个元素在元组中的索引
-print(f"index 666:{tuple.index(666)}")
+print(f"元素666的索引:{tuple.index(666)}")
 
 #3.count:获取元素在元组中出现的次数
-print(f"count 250:{tuple.count(250)}")
+print(f"元素250的次数:{tuple.count(250)}")
 
-#4.len:获取元组长度
-print(f"len(tuple):{len(tuple)}")
+#4.len:获取元组长度(元素个数)
+print(f"元组长度:{len(tuple)}")

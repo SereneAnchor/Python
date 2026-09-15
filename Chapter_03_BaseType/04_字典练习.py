@@ -7,21 +7,21 @@ for ch in str1:
 		resultDict1[ch]+=1
 	else:
 		resultDict1[ch]=1
-print(f"resultDict1:{resultDict1}")
+print(f"结果字典1:{resultDict1}")
 
 #案例2:将字符串转为字典(8=Eight 9=Nine 10=Ten->{'8':'Eight','9':'Nine','10':'Ten'})
 print("======== 案例2 ========")
 str2='8=Eight 9=Nine 10=Ten'
 
 #使用split根据空格划分子串返回一个列表,列表中每个元素都是字符串
-resultList2=str2.split(' ')
+resultList=str2.split(' ')
 resultDict2={}
-print(f"resultList2:{resultList2}")
+print(f"结果列表:{resultList}")
 
 #对每个字符串根据'='来进行拆包处理(列表、元组的拆包简单,字符串的拆包要结合split方法使用返回一个列表)
-for item in resultList2:
+for item in resultList:
 	key,value=item.split('=')
 	resultDict2[key]=value
-print(f"resultDict2:{resultDict2}")
+print(f"结果字典2:{resultDict2}")
 
 

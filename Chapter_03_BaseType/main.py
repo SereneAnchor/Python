@@ -6,38 +6,38 @@
 #列表的可变性
 #1、原地修改元素:直接通过索引来修改列表中某个元素的值
 list1=[10,20,30]
-print(f"list1:{list1}",end="\t")
-print(f"list1 address:{id(list1)}")
+print(f"列表1:{list1}",end="\t")
+print(f"列表1的地址:{id(list1)}")
 list1[2]=300
 print(f"======== set list1[2]={300} ========")
-print(f"list1:{list1}",end="\t")
-print(f"list1 address:{id(list1)}")
+print(f"列表1:{list1}",end="\t")
+print(f"列表1的地址:{id(list1)}")
 print()
 
 #2、动态增删:列表大小不固定,可以在其中任意添加和删除元素
 list2=["Paper A","Paper B"]
-print(f"list2:{list2}")
+print(f"列表2:{list2}")
 print(f"======== add {'Paper C'} to list2 ========")
 list2.append("Paper C")
-print(f"list2:{list2}")
+print(f"列表2:{list2}")
 print()
 
 #3、内部状态灵活:元素可以是任何类型的对象
 list3=['A','B','C']
 list4=list3
-print(f"list3:{list3}",end="\t\t")
-print(f"list3 address:{id(list3)}")
+print(f"列表3:{list3}",end="\t\t")
+print(f"列表3的地址:{id(list3)}")
 print(f"======== set {'list4'}={'list3'} ========")
-print(f"list4:{list4}",end="\t\t")
-print(f"list4 address:{id(list4)}")
+print(f"列表4:{list4}",end="\t\t")
+print(f"列表4的地址:{id(list4)}")
 print()
 
 list4.append('D')
 print(f"======== add {'D'} to {'list4'} ========")
-print(f"list3:{list3}",end="\t")
-print(f"list3 address:{id(list3)}")
-print(f"list4:{list4}",end="\t")
-print(f"list4 address:{id(list4)}")
+print(f"列表3:{list3}",end="\t")
+print(f"列表3的地址:{id(list3)}")
+print(f"列表4:{list4}",end="\t")
+print(f"列表4的地址:{id(list4)}")
 
 
 

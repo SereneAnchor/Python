@@ -7,7 +7,7 @@ sum=0
 for row in randomTuple:
 	for col in row:
 		sum=sum+col
-print(f"sum:{sum}")
+print(f"元组之和:{sum}")
 
 #案例2:给定一个元组,将其中>5的数字放到新列表中
 randomTuple=(2,3,4,5,6,7,8,9)
@@ -15,5 +15,5 @@ resultList=[]
 for i in randomTuple:
 	if i>5:
 		resultList.append(i)
-print(f"resultList:{resultList}")
+print(f"结果列表:{resultList}")
 

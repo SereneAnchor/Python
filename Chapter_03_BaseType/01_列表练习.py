@@ -7,8 +7,8 @@ str1="上升"
 str2="下降"
 str3="相等"
 resultList=[]
-print(f"length:{length}")
-print(f"randomList:{randomList}")
+print(f"列表长度:{length}")
+print(f"随机列表:{randomList}")
 for i in range(length-1):
 	if randomList[i]>randomList[i+1]:
 		resultList.append(str2)
@@ -16,7 +16,7 @@ for i in range(length-1):
 		resultList.append(str1)
 	else:
 		resultList.append(str3)
-print(f"resultList:{resultList}")
+print(f"关系列表:{resultList}")
 
 #案例2:找出列表中第一次重复出现的元素并输出
 countList=[]
