@@ -7,7 +7,7 @@ else:
 	print("{}是奇数.".format(num))
 
 
-#2、输入一个人的身高(m)和体重(kg),计算BMI指数(体重/身高平方)
+#2、输入一个人的身高(m)和体重(kg),计算BMI指数(体重/身高的平方)
 height=float(input("输入身高:"))
 weight=float(input("输入体重:"))
 BMI=weight/(height**2)

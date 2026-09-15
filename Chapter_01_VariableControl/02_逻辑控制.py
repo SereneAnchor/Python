@@ -6,6 +6,7 @@ print(f"{a}-{b}={a-b}")
 print(f"{a}*{b}={a*b}")
 print(f"{a}/{b}={a/b}")
 print(f"{a}//{b}={a//b}")
+print(f"{a}%{b}={a%b}")
 print(f"{a}**{b}={a**b}")
 
 #2、赋值运算符、比较运算符(返回布尔值)、逻辑运算符(and:都真才真、or:有真就为真、not:取反)返回布尔值

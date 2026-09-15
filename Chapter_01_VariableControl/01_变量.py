@@ -12,16 +12,16 @@ info=("张三",20)
 student={"name":"李四","age":25}
 
 #1、类型检查:type函数、isinstance函数
-print(type(age))
-print(isinstance(age,int))
-print(isinstance(age,str))
+print(f"age的类型:{type(age)}")
+print(f"age为int:{isinstance(age,int)}")
+print(f"age为str:{isinstance(age,str)}")
 
 #2.1、格式化输出:基础用法、保留两位小数(:.2f)、控制六位宽度(把数字'1'用'0'来补充到六位,以十进制整数表示)、
 name='Sally'
 age=30
 score=87.7
 print(f"姓名:{name},年龄:{age},成绩:{score}")
-print(f"保留成绩两位小数:{score:.2f}")
+print(f"成绩保留两位小数:{score:.2f}")
 print(f"学号:{1:06d}")
 
 #2.2、format方法(可以通过变量在format中的索引指定变量放在字符串的哪个占位符)
