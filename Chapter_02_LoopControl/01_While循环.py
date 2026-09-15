@@ -6,7 +6,7 @@ sum=0
 while i<=50:
 	sum+=i
 	i+=1
-print(f"sum is:{sum}")
+print(f"1-50的和:{sum}")
 
 #求1...50之间所有奇数的和
 i=1
@@ -15,7 +15,7 @@ while i<=50:
 	if i%2!=0:
 		sum+=i
 	i+=1
-print(f"sum is:{sum}")
+print(f"1-50的和:{sum}")
 
 #break用法
 i=1

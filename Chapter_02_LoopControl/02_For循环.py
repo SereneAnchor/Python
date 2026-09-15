@@ -7,7 +7,7 @@ sum=0
 for i in range(51):
 	if i%2!=0:
 		sum+=i
-print(f"sum is:{sum}")
+print(f"1-50的和:{sum}")
 
 #用户登录:username->SereneAnchor 密码825210647
 for i in range(2):
