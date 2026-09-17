@@ -9,7 +9,6 @@ def readCSV(fileName):
 			students.append({'name':name,'sex':sex,'age':age})
 	return students
 
-
 def writeCSV(fileName,students):
 	with open(fileName,'w',encoding='utf-8') as file:
 		file.write('姓名,性别,年龄\n')
