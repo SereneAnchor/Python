@@ -10,18 +10,18 @@
 
 #生成0-9的列表
 list1=[ele for ele in range(10)]
-print(f"list1:{list1}")
+print(f"列表1:{list1}")
 
 #生成偶数列表
 list2=[ele for ele in range(10) if ele%2==0]
-print(f"list2:{list2}")
+print(f"列表2:{list2}")
 
 #生成矩阵列表
 list3=[(row,col) for row in range(3) for col in range(4)]
-print(f"list3:{list3}")
+print(f"列表3:{list3}")
 
 
 #使用列表推导式生成平方数集合(输入10就生成1-10中每一个数字的平方)
 number=int(input("enter a number:"))
-list1=[ num**2 for num in range(1,number+1)]
-print(f"list1:{list1}")
+list4=[ num**2 for num in range(1,number+1)]
+print(f"列表4:{list4}")

@@ -30,7 +30,7 @@ def getPerson2():
 	print(f"函数2内全局地址:{id(person)}")
 getPerson2()
 
-#不可变类型
+#不可变类型(在函数内修改全局变量)
 numC=30
 def getNumB():
 	global numC
